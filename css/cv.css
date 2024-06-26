@@ -25,7 +25,7 @@ header, footer {
     color: white;
 }
 h1 {
-    width: 400px;
+    max-width: 400px;
     font-size: 80px;
     font-weight: bolder;
     text-align: center;
@@ -33,11 +33,9 @@ h1 {
     margin-top: 50px;
 }
 h2 {
-    width: 400px;
     font-size: x-large;
     font-weight: 5;
     text-align: center;
-    margin: 0 auto;
     margin-top: 50px;
 }
 p {
@@ -49,43 +47,58 @@ p {
 h3 {
     border-left: 7px solid #e3ce16;
     padding-left: 10px;
-    margin: 50px 0px 20px 15%;
+    margin: 80px 0px 40px 15%;
+    font-weight: bold;
 }
 header li {
     list-style: none;
-    margin-bottom: 15px;
-    margin-left: 11%;
+    margin-bottom: 30px;
+    margin-left: 17.5%;
 }
-.contacto li svg {
+.idiomas li {
+    width: 68%;
+    display: flex;
+    justify-content: space-between;
+}
+.idiomas img {
+    height: 20px;
+    width: 115px;
+}
+.contacto svg {
     margin-right: 5px;
 }
 header a {
-    color:white;
+    color: white;
 }
 .lateral-derecho {
     background-color: white;
     width: 45%;
+    padding-bottom: 50px;
 }
 h4 {
     background-color: #e3dd16;
-    padding: 5px 10px 5px 50px;
+    padding: 5px 5% 5px 5%;
     color: black;
     font-size: xx-large;
     font-weight: bold;
 }
-main h4 {
+main h4, aside h4 {
     margin-top: 50px;
 }
 h5 {
     color: rgb(172, 167, 14);
     font-size: large;
-    padding-left: 60px;
-    margin-top: 30px;
+    margin: 30px 5% 20px 12%;
+}
+main li, aside li {
+    margin: 0px 5% 15px 30%;
 }
 .carrousel {
     position: relative;
-    margin-bottom: 50px;
-    margin-top: 20px;
+}
+.carrousel img {
+    width: 100%;
+    display: block;
 }
 #control {
     position: absolute;
@@ -105,20 +118,9 @@ h5 {
 /* #retroceder img, #avanzar img {
     box-shadow: 21px 23px 38px 45px rgba(7,7,49,0.52);
 } */
-.carrousel img {
-    width: 100%;
-    display: block;
-}
 h6 {
     font-weight: bolder;
-    margin: 20px 0px 15px 50px;
-    padding-left: 60px;
-}
-main li, aside li {
-    margin: 20px 0px 15px 85px;
-}
-div ul {
-    margin-left: 60px;
+    margin: 20px 5% 15px 20%;
 }
 footer {
     width: 90%;
@@ -127,24 +129,79 @@ footer {
 footer h4 {
     text-align: center;
 }
+.otros {
+    margin-bottom: 30px;
+}
 footer li {
     margin: 20px 0px 15px 5%;
+}
+.proyectos {
+    margin-top: 50px;
+}
+.github {
+    display: flex;
+    justify-content: center;
 }
 footer img {
     filter: invert(100%);
 }
 
-/* proyectos */
+/* PROYECTOS
 iframe {
-    display: none;
+    display: inline-flex;
     background-color: white;
     width: 30%;
     height: 500px;
     border: none;
 }
+*/
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 759px) {
     .contenedor {
         flex-direction: column;
+    }
+    header {
+        width: 100%
+    }
+    .borde-foto {
+        width: 260px;
+        height: 260px;
+    }
+    .borde-foto img {
+        width: 260px;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: large;
+    }
+    p {
+        max-width: 80%; 
+    }
+    h3 {
+        padding-left: 10px;
+        margin-left: 10%;
+    }
+    header li {
+        margin-left: 10%;
+    }
+    .idiomas li {
+        width: 80%;
+    }
+    .contacto li {
+        margin-left: 4%;
+    }
+    .contacto svg {
+        margin-right: 0px;
+    }
+    .lateral-derecho {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+    }
+    footer li {
+        margin-left: 10%;
     }
 }
