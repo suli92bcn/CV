@@ -1,0 +1,150 @@
+@import url("reset.css");
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #070731;
+}
+.contenedor {
+    display: flex;
+    flex-direction: row;
+}
+header {
+    width: 50%
+}
+.borde-foto {
+    background-color: #e3ce16;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.borde-foto img {
+    width: 300px;
+}
+header, footer {
+    color: white;
+}
+h1 {
+    width: 400px;
+    font-size: 80px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+h2 {
+    width: 400px;
+    font-size: x-large;
+    font-weight: 5;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+p {
+    max-width: 70%;
+    text-align: justify;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+h3 {
+    border-left: 7px solid #e3ce16;
+    padding-left: 10px;
+    margin: 50px 0px 20px 15%;
+}
+header li {
+    list-style: none;
+    margin-bottom: 15px;
+    margin-left: 11%;
+}
+.contacto li svg {
+    margin-right: 5px;
+}
+header a {
+    color:white;
+}
+.lateral-derecho {
+    background-color: white;
+    width: 45%;
+}
+h4 {
+    background-color: #e3dd16;
+    padding: 5px 10px 5px 50px;
+    color: black;
+    font-size: xx-large;
+    font-weight: bold;
+}
+main h4 {
+    margin-top: 50px;
+}
+h5 {
+    color: rgb(172, 167, 14);
+    font-size: large;
+    padding-left: 60px;
+    margin-top: 30px;
+}
+.carrousel {
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+#control {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5% 0 5%;
+}
+#retroceder {
+    transform: rotate(90deg);
+}
+#avanzar {
+    transform: rotate(-90deg);
+}
+/* #retroceder img, #avanzar img {
+    box-shadow: 21px 23px 38px 45px rgba(7,7,49,0.52);
+} */
+.carrousel img {
+    width: 100%;
+    display: block;
+}
+h6 {
+    font-weight: bolder;
+    margin: 20px 0px 15px 50px;
+    padding-left: 60px;
+}
+main li, aside li {
+    margin: 20px 0px 15px 85px;
+}
+div ul {
+    margin-left: 60px;
+}
+footer {
+    width: 90%;
+    margin: 0 auto;
+}
+footer h4 {
+    text-align: center;
+}
+footer li {
+    margin: 20px 0px 15px 5%;
+}
+footer img {
+    filter: invert(100%);
+}
+
+/* proyectos */
+iframe {
+    display: none;
+    background-color: white;
+    width: 30%;
+    height: 500px;
+    border: none;
+}
+
+@media screen and (max-width: 360px) {
+    .contenedor {
+        flex-direction: column;
+    }
+}
