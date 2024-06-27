@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suli92bcn.github.io/CV/sitemap.xml
+
+
+User-agent: MSNBot
+Disallow: /
+
+User-agent: baiduspider
+Disallow: /
+
+User-agent: yahoo-mmcrawler
+Disallow: /
+
