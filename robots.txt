@@ -2,4 +2,3 @@ User-agent: *
 Disallow:
 
 Sitemap: https://suli92bcn.github.io/CV/sitemap.xml
-
