@@ -200,7 +200,7 @@ iframe {
     h2 {
         font-size: large;
     }
-    p {
+    .contenedor p {
         max-width: 80%; 
     }
     h3 {
