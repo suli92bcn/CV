@@ -45,6 +45,6 @@ export function initCookieBar() {
     document.addEventListener('DOMContentLoaded', () => {
         checkAndShowCookieBar();
         document.getElementById("aceptarBtn").addEventListener('click', PonerCookie);
-        console.log("Evento de clic añadido al botón de aceptar"); // Agrega esto para confirmar que el evento se ha añadido
+        console.log("Evento de click añadido al botón de aceptar"); // Agrega esto para confirmar que el evento se ha añadido
     });
 }
