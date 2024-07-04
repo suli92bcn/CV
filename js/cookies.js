@@ -30,6 +30,7 @@ export function checkAndShowCookieBar() {
         document.getElementById("barraaceptacion").style.display = "block";
         console.log("Mostrando la barra de aceptación"); // Agrega esto para confirmar que la barra se está mostrando
     } else {
+        document.getElementById("barraaceptacion").style.display = "none";
         console.log("La cookie ya está establecida, no se muestra la barra de aceptación"); // Agrega esto para confirmar que la cookie ya está establecida
     }
 }
