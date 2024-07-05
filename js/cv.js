@@ -36,7 +36,6 @@ function renderizarImagen() {
     img.src = fotos[posicionActual];
     div.innerHTML = '';
     div.appendChild(img);
-    // console.log('imagen mostrada', img.src);
 }
 renderizarImagen();
 botonAvanzar.addEventListener("click", function(event) {
