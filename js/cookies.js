@@ -1,50 +1,51 @@
 export function getCookie(c_name) {
-    var c_value = document.cookie;
-    console.log("Valor de todas las cookies:", c_value); // Agrega esto para ver todas las cookies
-    var c_start = c_value.indexOf(" " + c_name + "=");
-    if (c_start == -1) {
-        c_start = c_value.indexOf(c_name + "=");
-    }
-    if (c_start == -1) {
-        c_value = null;
-    } else {
-        c_start = c_value.indexOf("=", c_start) + 1;
-        var c_end = c_value.indexOf(";", c_start);
-        if (c_end == -1) {
-            c_end = c_value.length;
-        }
-        c_value = unescape(c_value.substring(c_start, c_end));
-    }
-    console.log("Valor de la cookie solicitada:", c_value); // Agrega esto para ver el valor de la cookie solicitada
-    return c_value;
+    let c_value = document.cookie.match('(^|;) ?' + c_name + '=([^;]*)(;|$)');
+    return c_value ? decodeURIComponent(c_value[2]) : null;
 }
 export function setCookie(c_name, value, exdays) {
-    var exdate = new Date();
+    let exdate = new Date();
     exdate.setDate(exdate.getDate() + exdays);
-    var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
-    document.cookie = c_name + "=" + c_value + ";path=/;SameSite=Lax";
-    console.log("Cookie establecida:", document.cookie); // Agrega esto para confirmar que la cookie se ha establecido
+    let cookieValue = { value: value, expires: exdate.toUTCString() };
+    document.cookie = `${c_name}=${encodeURIComponent(JSON.stringify(cookieValue))}; expires=${exdate.toUTCString()}; path=/; SameSite=Lax`;
+}
+// OBTENER DATOS COOKIE
+export function getCookieInfo(c_name) {
+    let cookie = getCookie(c_name);
+    if (cookie) {
+        try {
+            let { value, expires } = JSON.parse(cookie);
+            let daysRemaining = Math.floor((new Date(expires) - new Date()) / (1000 * 60 * 60 * 24));
+            return { name: c_name, value: value, daysRemaining: daysRemaining };
+        } catch (e) {
+            console.error('Error al analizar la cookie:', e);
+        }
+    }
+    return null;
 }
 export function checkAndShowCookieBar() {
-    if (getCookie('tiendaaviso') !== "1") {
-        document.getElementById("barraaceptacion").style.display = "block";
-        console.log("Mostrando la barra de aceptación"); // Agrega esto para confirmar que la barra se está mostrando
+    let cookieName = 'CV_gonzalo';
+    let cookieInfo = getCookieInfo(cookieName);
+    if (!cookieInfo || (cookieInfo.value !== true)) {
+        document.getElementById('barraaceptacion').style.display = 'block';
     } else {
-        document.getElementById("barraaceptacion").style.display = "none";
-        console.log("La cookie ya está establecida, no se muestra la barra de aceptación"); // Agrega esto para confirmar que la cookie ya está establecida
+        document.getElementById('barraaceptacion').style.display = 'none';
+// PINTAR DATOS COOKIE
+        if (cookieInfo.daysRemaining !== null) {
+            console.info(`La cookie %c${cookieInfo.name}%c tiene valor %c${cookieInfo.value}%c y expirará en %c${cookieInfo.daysRemaining}%c días.`,
+                'color: rgb(0,255,0)', '', 'color: rgb(0,255,0)', '', 'color: rgb(0,255,0)', '');
+        } else {
+            console.error(`No se pudo determinar el tiempo restante para la cookie "${cookieName}".`);
+        }
     }
 }
 export function PonerCookie(event) {
     if (event) event.preventDefault();
-    setCookie('tiendaaviso', '1', 365);
-    console.log("Cookie 'tiendaaviso' establecida a 1 por 365 días"); // Agrega esto para confirmar que la cookie se ha establecido
-    document.getElementById("barraaceptacion").style.display = "none";
-    console.log("Ocultando la barra de aceptación"); // Agrega esto para confirmar que la barra se está ocultando
+    setCookie('CV_gonzalo', true, 365);
+    document.getElementById('barraaceptacion').style.display = 'none';
 }
 export function initCookieBar() {
     document.addEventListener('DOMContentLoaded', () => {
         checkAndShowCookieBar();
-        document.getElementById("aceptarBtn").addEventListener('click', PonerCookie);
-        console.log("Evento de click añadido al botón de aceptar"); // Agrega esto para confirmar que el evento se ha añadido
+        document.getElementById('aceptarBtn').addEventListener('click', PonerCookie);
     });
 }
