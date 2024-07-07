@@ -1,9 +1,7 @@
 import * as cookies from './cookies.js';
 cookies.initCookieBar();
 
-let botonAvanzar = document.getElementById("avanzar");
-let botonRetroceder = document.getElementById("retroceder");
-let fotos = [
+const fotos = [
     "media/img/certificat_FRONT-END.png",
     "media/img/certificat_WEB-DEVELOPMENT.png",
     "media/img/certificat_HTML.png",
@@ -11,39 +9,20 @@ let fotos = [
     "media/img/certificat_JS.png",
     "media/img/certificat_JS-2.png",
 ];
-let div = document.getElementById("divParaImg");
-let img = document.createElement("img");
+const img = document.createElement("img");
+document.getElementById("divParaImg").appendChild(img);
 let posicionActual = 0;
-function avanzarFoto() {
-    if (posicionActual >= (fotos.length - 1)) {
-        posicionActual = 0;
-    }
-    else {
-        posicionActual = posicionActual + 1;
-    }
-    renderizarImagen();
-}
-function retrocederFoto() {
-    if (posicionActual <= 0) {
-        posicionActual = fotos.length - 1;
-    }
-    else {
-        posicionActual--;
-    }
-    renderizarImagen();
-}
-function renderizarImagen() {
+let intervalId = setInterval(() => cambiarFoto(1), 6000);
+const cambiarFoto = (avance) => {
+    posicionActual = (posicionActual + avance + fotos.length) % fotos.length;
     img.src = fotos[posicionActual];
-    div.innerHTML = '';
-    div.appendChild(img);
-}
-renderizarImagen();
-botonAvanzar.addEventListener("click", function(event) {
-    event.preventDefault();
-    avanzarFoto();
-});
-botonRetroceder.addEventListener("click", function(event) {
-    event.preventDefault();
-    retrocederFoto();
-});
-setInterval(avanzarFoto, 6000);
+    clearInterval(intervalId);
+    intervalId = setInterval(() => cambiarFoto(1), 6000);
+};
+['avanzar', 'retroceder'].forEach((id, i) => 
+    document.getElementById(id).addEventListener("click", (e) => {
+        e.preventDefault();
+        cambiarFoto(i === 0 ? 1 : -1);
+    })
+);
+cambiarFoto(0);
