@@ -3,4 +3,3 @@ Disallow: /newsletter.html
 
 Sitemap: https://suli92bcn.github.io/CV/sitemap.xml
 Sitemap: https://suli92bcn.github.io/CV/sitemap.xml.gz
-
