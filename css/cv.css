@@ -151,6 +151,12 @@ footer li {
     width: 89%;
     margin: 0 auto;
 }
+.pdf ul {
+    margin-right: 30px;
+}
+.pdf svg {
+    margin-top: 30px;
+}
 .proyectos {
     margin-top: 50px;
 }
