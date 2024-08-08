@@ -128,11 +128,6 @@ main a {
 #avanzar {
     transform: rotate(-90deg);
 }
-
-/* #retroceder img, #avanzar img {
-    box-shadow: 21px 23px 38px 45px rgba(7,7,49,0.52);
-} */
-
 h6 {
     font-weight: bolder;
     margin: 20px 5% 15px 20%;
@@ -156,30 +151,14 @@ footer li {
     width: 89%;
     margin: 0 auto;
 }
-.logo {
-    width: 90px;
-    margin-top: 30px;
-}
 .proyectos {
     margin-top: 50px;
 }
 .github {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
-footer img {
-    filter: invert(100%);
-}
-
-/* PROYECTOS
-iframe {
-    display: inline-flex;
-    background-color: white;
-    width: 30%;
-    height: 500px;
-    border: none;
-}
-*/
 
 @media screen and (max-width: 759px) {
     .contenedor {
@@ -212,9 +191,6 @@ iframe {
         margin-left: 14%;
         width: 80%;
     }
-    /* .contacto svg {
-        margin-right: 0;
-    } */
     h4 {
         text-align: center;
     }
