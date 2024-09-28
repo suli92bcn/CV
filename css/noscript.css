@@ -5,10 +5,11 @@
     width: 100%;
     background-color: #000000cc;
     color: #ffcc00;
+    font-size: large;
     font-weight: bolder;
     padding: 10px 10px;
     text-align: center;
-    min-height: 50px;
+    min-height: auto;
 }
 noscript .noscript-warning {
     display: block;
