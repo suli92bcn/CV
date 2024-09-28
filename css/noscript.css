@@ -3,13 +3,12 @@
     position: fixed;
     z-index: 99999;
     width: 100%;
-    background-color: rgba(255, 0, 0, 0.9);
-    color: white;
-    padding: 5px 10px;
+    background-color: #000000cc;
+    color: #ffcc00;
+    font-weight: bolder;
+    padding: 10px 10px;
     text-align: center;
-}
-.aviso {
-    margin-top: 0;
+    min-height: 50px;
 }
 noscript .noscript-warning {
     display: block;
