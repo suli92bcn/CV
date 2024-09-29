@@ -179,12 +179,11 @@ footer li {
         padding-right: 10%;
         padding-left: 10%;
     }
-    .borde-foto {
+    .foto img {
+        border: 7px solid var(--contraste2);
+        border-radius: 50%;
         width: 260px;
         height: 260px;
-    }
-    .borde-foto img {
-        width: 260px;
     }
     h1 {
         font-size: 60px;
