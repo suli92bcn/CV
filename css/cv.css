@@ -180,8 +180,6 @@ footer li {
         padding-left: 10%;
     }
     .foto img {
-        border: 7px solid var(--contraste2);
-        border-radius: 50%;
         width: 260px;
         height: 260px;
     }
