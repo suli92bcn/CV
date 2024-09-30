@@ -9,13 +9,23 @@ const fotos = [
     "media/img/certificat_JS.png",
     "media/img/certificat_JS-2.png",
 ];
-const img = document.createElement("img");
-document.getElementById("divParaImg").appendChild(img);
+const imgContainer = document.createElement("div");
+imgContainer.style.display = "flex";
+imgContainer.style.transition = "transform 0.5s ease";
+imgContainer.style.width = `${fotos.length * 100}%`;
+fotos.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.style.width = `${100 / fotos.length}%`;
+    imgContainer.appendChild(img);
+});
+document.getElementById("divParaImg").appendChild(imgContainer);
 let posicionActual = 0;
 let intervalId = setInterval(() => cambiarFoto(1), 6000);
 const cambiarFoto = (avance) => {
     posicionActual = (posicionActual + avance + fotos.length) % fotos.length;
-    img.src = fotos[posicionActual];
+    imgContainer.style.transform = `translateX(-${(posicionActual * 100) / fotos.length}%)`;
+    
     clearInterval(intervalId);
     intervalId = setInterval(() => cambiarFoto(1), 6000);
 };
