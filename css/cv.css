@@ -38,7 +38,7 @@
     --amarilloContraste: #ffcc00;
     --negroContraste: black;
     --doradoContraste: #9f8415;
-    --marronContraste: #545454;
+    --grisContraste: #545454;
 }
 body {
     font-family: 'PT Sans', Arial, Helvetica, sans-serif;
@@ -125,7 +125,7 @@ header a {
     padding-bottom: 30px;
 }
 .lateral-derecho li, .lateral-derecho a {
-    color: var(--marronContraste);
+    color: var(--grisContraste);
 }
 h4 {
     background-color: var(--amarilloContraste);
