@@ -167,13 +167,17 @@ main a {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 5% 0 5%;
+    padding: 0 5%;
 }
 #retroceder {
     transform: rotate(90deg);
 }
 #avanzar {
     transform: rotate(-90deg);
+}
+#divParaImg {
+    width: 100%;
+    overflow: hidden;
 }
 footer {
     width: 90%;
