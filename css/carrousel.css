@@ -1,0 +1,26 @@
+.carrousel {
+    position: relative;
+}
+.carrousel img {
+    width: 100%;
+    display: block;
+}
+#control {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+#retroceder {
+    transform: rotate(90deg);
+}
+#avanzar {
+    transform: rotate(-90deg);
+}
+#divParaImg {
+    width: 100%;
+    overflow: hidden;
+}
