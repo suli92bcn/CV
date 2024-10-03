@@ -3,7 +3,7 @@ export function abrirModal(pdfLinkSelector, modalSelector, pdfViewerSelector, cl
     const pdfViewer = document.querySelector(pdfViewerSelector);
     const closeModalBtn = document.querySelector(closeSelector);
     const pdfLinks = document.querySelectorAll(pdfLinkSelector);
-    const isMobile = window.matchMedia("(max-width: 759px)").matches;
+    const isMobile = /Mobi/i.test(navigator.userAgent);
     pdfLinks.forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
