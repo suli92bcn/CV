@@ -9,29 +9,30 @@
 	    <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <style type="text/css">
-            * {
-                margin: 0;
-                padding: 0;
-                border: 0;
-                font-size: 100%;
-                font: inherit;
-                vertical-align: baseline;
-            /* AÑADIDO POR GERARD-GPT */
-                box-sizing: border-box;
-            }
+            /* http://meyerweb.com/eric/tools/css/reset/ 
+                v2.0 | 20110126
+                License: none (public domain) */
+                html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    box-sizing: border-box; /* AÑADIDO POR GERARD-GPT */
+                }
             body {
                 background-color: black;
                 font-family: Arial, Helvetica, sans-serif;
                 color: white;
             }
-            table {
+            table, tr, th, td { /* PROVISIONAL */
                 border: 1px solid magenta;
+            }
+            table {
                 width: 600px;
                 margin: 0 auto;
                 background-color: #1d2a42;
-            }
-            td {
-                border: 1px solid magenta;
             }
             h1 {
                 max-width: 400px;
@@ -67,7 +68,7 @@
             }
             h4 {
                 color: black;
-                font-size: xx-large;
+                font-size: x-large;
                 font-weight: bold;
             }
             h5 {
@@ -81,6 +82,9 @@
                 font-weight: bold;
                 margin: 20px 5% 15px 20%;
             }
+            ul {
+                margin-left: 200px;
+            }
             li {
                 line-height: 160%;
             }
@@ -89,7 +93,7 @@
     <body>
         <table width="100%" cellpadding="0" cellspacing="0">
             <tr>
-                <th colspan="3"><img src="media/img/foto_gonzalo.png" width="260" height="260" alt="Foto Gonzalo" style="border: 7px solid #ffcc00; border-radius: 50%; width: 260px; height: 260px; margin: 0 auto; margin-top: 50px;"/></td>
+                <th colspan="3"><img src="media/img/foto_gonzalo.png" width="260" height="260" alt="Foto Gonzalo" style="border: 7px solid #ffcc00; border-radius: 50%; width: 260px; height: 260px; margin: 0 auto; margin-top: 50px;"/></th>
             </tr>
             <tr>
                 <th colspan="3"><h1>Gonzalo Cabezas Núñez</h1></th>
@@ -114,7 +118,7 @@
                         <tr>
                             <td>Catalán</td>
                             <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="140px" viewBox="0 0 115 20">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="140px" viewBox="0 0 115 20" style="margin-right: 0px;">
                                     <circle cx="10" cy="10" r="8" fill="#ffcc00"/>
                                     <circle cx="37" cy="10" r="8" fill="#ffcc00"/>
                                     <circle cx="64" cy="10" r="8" fill="#ffcc00"/>
@@ -275,7 +279,7 @@
                     <table>
                         <tr>
                             <td>
-                                <ul>
+                                <ul style="margin-left: 20px;">
                                     <li>Permiso de conducir B y vehículo propio</li>
                                     <li>Disponibilidad total dentro de la provincia de Barcelona</li>
                                 </ul>
