@@ -3,14 +3,19 @@ export function abrirModal(pdfLinkSelector, modalSelector, pdfViewerSelector, cl
     const pdfViewer = document.querySelector(pdfViewerSelector);
     const closeModalBtn = document.querySelector(closeSelector);
     const pdfLinks = document.querySelectorAll(pdfLinkSelector);
+    const isMobile = window.matchMedia("(max-width: 759px)").matches;
     pdfLinks.forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
             const pdfSrc = link.getAttribute('data-pdf');
-            pdfViewer.src = pdfSrc;
-            modal.style.display = 'flex';
-            setTimeout(() => modal.classList.add('show'), 10);
-            document.body.classList.add('no-scroll');
+            if (isMobile) {
+                window.open(pdfSrc, '_blank');
+            } else {
+                pdfViewer.src = pdfSrc;
+                modal.style.display = 'flex';
+                setTimeout(() => modal.classList.add('show'), 10);
+                document.body.classList.add('no-scroll');
+            }
         });
     });
     closeModalBtn.addEventListener('click', () => {
