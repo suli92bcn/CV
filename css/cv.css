@@ -139,12 +139,12 @@ h4 {
 main h4, aside h4 {
     margin-top: 50px;
 }
-h5 {
+h6 {
     color: var(--doradoContraste);
     font-size: large;
     margin: 30px 5% 20px 10%;
 }
-h6 {
+h5 {
     font-weight: bold;
     font-style: italic;
     margin: 0 5% 15px 20%;
