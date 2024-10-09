@@ -22,7 +22,7 @@ export function abrirModal(pdfLinkSelector, modalSelector, pdfViewerSelector, cl
         modal.classList.remove('show');
         setTimeout(() => {
             modal.style.display = 'none';
-            pdfViewer.src = '#';
+            pdfViewer.src = '';
         }, 300);
         document.body.classList.remove('no-scroll');
     });
@@ -31,7 +31,7 @@ export function abrirModal(pdfLinkSelector, modalSelector, pdfViewerSelector, cl
             modal.classList.remove('show');
             setTimeout(() => {
                 modal.style.display = 'none';
-                pdfViewer.src = '#';
+                pdfViewer.src = '';
             }, 300);
             document.body.classList.remove('no-scroll');
         }
