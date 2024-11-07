@@ -37,6 +37,7 @@
 :root {
     --azulBase: #1d2a42;
     --blancoContraste: white;
+    --blancoFondoIzq: rgba(255, 255, 255, 0.95);
     --amarilloContraste: #ffcc00;
     --negroContraste: black;
     --doradoContraste: #9f8415;
@@ -136,7 +137,7 @@ header a {
     color: var(--blancoContraste);
 }
 .lateral-derecho {
-    background-color: var(--blancoContraste);
+    background-color: var(--blancoFondoIzq);
     width: 45%;
     padding-bottom: 30px;
 }
