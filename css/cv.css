@@ -36,12 +36,12 @@
 }
 :root {
     --azulBase: #1d2a42;
-    --blancoContraste: white;
+    --blancoTexto: white;
+    --amarilloTitulos: #ffcc00;
+    --negroTitulos: black;
     --blancoFondoIzq: rgba(255, 255, 255, 0.95);
-    --amarilloContraste: #ffcc00;
-    --negroContraste: black;
-    --doradoContraste: #9f8415;
-    --grisContraste: #545454;
+    --doradoTitulos: #9f8415;
+    --grisListas: #545454;
 }
 body {
     font-family: 'PT Sans', Arial, Helvetica, sans-serif;
@@ -60,13 +60,13 @@ header {
     padding: 50px 5% 0 5%;
 }
 header, footer {
-    color: var(--blancoContraste);
+    color: var(--blancoTexto);
 }
 .foto {
     text-align: center;
 }
 .foto img {
-    border: 7px solid var(--amarilloContraste);
+    border: 7px solid var(--amarilloTitulos);
     border-radius: 50%;
     width: 300px;
     height: 300px;
@@ -101,7 +101,7 @@ h2, h5 {
     margin-top: 50px;
 }
 h3 {
-    border-left: 7px solid var(--amarilloContraste);
+    border-left: 7px solid var(--amarilloTitulos);
     padding-left: 12px;
     margin: 80px 0 40px 0;
     font-weight: bold;
@@ -134,7 +134,7 @@ figcaption {
     flex-shrink: 0;
 }
 header a {
-    color: var(--blancoContraste);
+    color: var(--blancoTexto);
 }
 .lateral-derecho {
     background-color: var(--blancoFondoIzq);
@@ -142,12 +142,12 @@ header a {
     padding-bottom: 30px;
 }
 .lateral-derecho li, .lateral-derecho a {
-    color: var(--grisContraste);
+    color: var(--grisListas);
 }
 h4 {
-    background-color: var(--amarilloContraste);
+    background-color: var(--amarilloTitulos);
     padding: 5px 5% 5px 5%;
-    color: var(--negroContraste);
+    color: var(--negroTitulos);
     font-size: xx-large;
     font-weight: bold;
 }
@@ -155,7 +155,7 @@ main h4, aside h4 {
     margin-top: 50px;
 }
 h6 {
-    color: var(--doradoContraste);
+    color: var(--doradoTitulos);
     font-size: large;
     margin: 30px 5% 20px 10%;
 }
@@ -168,7 +168,7 @@ main li, aside li {
     margin: 0 5% 10px 30%;
 }
 main a {
-    color: var(--negroContraste);
+    color: var(--negroTitulos);
 }
 footer {
     width: 90%;
