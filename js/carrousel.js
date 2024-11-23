@@ -1,11 +1,11 @@
 export const iniciarCarrousel = () => {
     const fotos = [
-        "img/certificat_FRONT-END.png",
-        "img/certificat_WEB-DEV.png",
-        "img/certificat_HTML.png",
-        "img/certificat_CSS.png",
-        "img/certificat_JS.png",
-        "img/certificat_JS-2.png",
+        "img/photos/certificat_FRONT-END.png",
+        "img/photos/certificat_WEB-DEV.png",
+        "img/photos/certificat_HTML.png",
+        "img/photos/certificat_CSS.png",
+        "img/photos/certificat_JS.png",
+        "img/photos/certificat_JS-2.png",
     ];
     const descripciones = [
         "Certificado de Front-End",
